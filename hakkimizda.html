@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hakkımızda | Sanal Kütüphane Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav {
+            background-color: #1e90ff;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .main {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        h2,
+        h3 {
+            color: #2e3b4e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hakkımızda</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a class="active" href="hakkimizda.html">Hakkımızda</a>
+        <a href="kitaplar.html">Kitaplar</a>
+        <a href="uyelik.html">Üyelik</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="yardim.html">Yardım / SSS</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menü</h3>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="kitaplar.html">Kitaplar</a></li>
+                <li><a href="uyelik.html">Üyelik</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="yardim.html">Yardım / SSS</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Kütüphanemiz Hakkında</h2>
+            <p>Kütüphanemiz 2025 yılında kurulmuş, bilgiye erişimi kolaylaştırmayı amaçlayan bir halk kütüphanesidir.
+                Binlerce kitap, dergi, dijital kaynak ve çalışma alanı ile tüm ziyaretçilere hizmet vermektedir.</p>
+
+            <h3>Misyonumuz</h3>
+            <p>Toplumun her kesimine bilgiye erişim imkânı sunmak, okuma kültürünü yaygınlaştırmak ve eğitimde
+                destekleyici bir rol üstlenmektir.</p>
+
+            <h3>Vizyonumuz</h3>
+            <p>Teknolojiyle entegre, kullanıcı odaklı ve sürekli gelişen bir bilgi merkezi olmaktır.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kütüphane Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+
+</html>

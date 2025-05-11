@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Etkinlikler | Sanal Kütüphane Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav {
+            background-color: #1e90ff;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .main {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        table tr:hover {
+            background-color: #eef;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 15px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kütüphane Etkinlikleri</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="kitaplar.html">Kitaplar</a>
+        <a href="uyelik.html">Üyelik</a>
+        <a class="active" href="etkinlikler.html">Etkinlikler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="yardim.html">Yardım / SSS</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menü</h3>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="kitaplar.html">Kitaplar</a></li>
+                <li><a href="uyelik.html">Üyelik</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="yardim.html">Yardım / SSS</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Yaklaşan Etkinlikler</h2>
+            <input type="text" id="searchInput" placeholder="Etkinlik ara...">
+
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Tarih</th>
+                        <th>Etkinlik</th>
+                        <th>Yer</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20 Nisan 2025</td>
+                        <td>Kitap Okuma Günü</td>
+                        <td>Konferans Salonu</td>
+                        <td>Toplu kitap okuma ve tartışma.</td>
+                    </tr>
+                    <tr>
+                        <td>27 Nisan 2025</td>
+                        <td>Yazar Söyleşisi: Ayşe Kulin</td>
+                        <td>Salon A</td>
+                        <td>Yazarlık üzerine sohbet.</td>
+                    </tr>
+                    <tr>
+                        <td>5 Mayıs 2025</td>
+                        <td>Üniversiteli Öğrenciler ile Buluşma</td>
+                        <td>Gençlik Buluşması</td>
+                        <td>Tüm öğrenciler davetlidir.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Etkinliklere katılım ücretsizdir. Detaylı bilgi için iletişime geçebilirsiniz.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kütüphane Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        document.getElementById("searchInput").addEventListener("keyup", function () {
+            let input = this.value.toLowerCase();
+            let rows = document.querySelectorAll("#eventTable tbody tr");
+            rows.forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(input) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

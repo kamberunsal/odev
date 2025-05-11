@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa | Sanal Kütüphane Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav {
+            background-color: #1e90ff;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .main {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        h2,
+        h3 {
+            color: #2e3b4e;
+        }
+
+        img {
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hoşgeldiniz!</h1>
+    </header>
+
+    <nav>
+        <a class="active" href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="kitaplar.html">Kitaplar</a>
+        <a href="uyelik.html">Üyelik</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="yardim.html">Yardım / SSS</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menü</h3>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="kitaplar.html">Kitaplar</a></li>
+                <li><a href="uyelik.html">Üyelik</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="yardim.html">Yardım / SSS</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <img src="resimler/kutuphane.jpg.jpg" alt="Kütüphane Görseli" width="300" height="150">
+            <h2>Kütüphanemize Hoşgeldiniz</h2>
+            <p>Burada binlerce kitaba, etkinliğe ve bilgiye ulaşabilirsiniz.</p>
+
+            <h3>Tanıtım Videomuz</h3>
+            <iframe src="https://www.youtube.com/embed/4gFQ7L23YV8" title="YouTube video player"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Düzce Kütüphane Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+
+</html>

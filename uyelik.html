@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Üyelik | Sanal Kütüphane Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav {
+            background-color: #1e90ff;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .main {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: 2px 2px 8px #ccc;
+        }
+
+        h2,
+        h3 {
+            color: #2e3b4e;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0d74d1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Üyelik Başvuru Formu</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="kitaplar.html">Kitaplar</a>
+        <a class="active" href="uyelik.html">Üyelik</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="yardim.html">Yardım / SSS</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menü</h3>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="kitaplar.html">Kitaplar</a></li>
+                <li><a href="uyelik.html">Üyelik</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="yardim.html">Yardım / SSS</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Üye Olmak İçin Formu Doldurun</h2>
+            <form action="#" method="post">
+                <label for="ad">Ad:</label>
+                <input type="text" id="ad" name="ad" required>
+
+                <label for="soyad">Soyad:</label>
+                <input type="text" id="soyad" name="soyad" required>
+
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon" name="telefon">
+
+                <label for="dogum_tarihi">Doğum Tarihi:</label>
+                <input type="date" id="dogum_tarihi" name="dogum_tarihi">
+
+                <label>Cinsiyet:</label>
+                <input type="radio" id="erkek" name="cinsiyet" value="erkek">
+                <label for="erkek" style="display:inline;">Erkek</label>
+                <input type="radio" id="kadin" name="cinsiyet" value="kadin">
+                <label for="kadin" style="display:inline;">Kadın</label>
+
+                <input type="submit" value="Üye Ol">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kütüphane Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+
+</html>
