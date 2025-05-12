@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yardım / SSS | Sanal Kütüphane Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Yardım / SSS</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="kitaplar.html">Kitaplar</a>
+        <a href="uyelik.html">Üyelik</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a class="active" href="yardim.html">Yardım / SSS</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menü</h3>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="kitaplar.html">Kitaplar</a></li>
+                <li><a href="uyelik.html">Üyelik</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="yardim.html">Yardım / SSS</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Sıkça Sorulan Sorular</h2>
+
+            <button class="accordion">Kütüphane hangi saatlerde açıktır?</button>
+            <div class="panel">
+                <p>Kütüphanemiz hafta içi 09:00 - 18:00 saatleri arasında hizmet vermektedir. Hafta sonları kapalıdır.
+                </p>
+            </div>
+
+            <button class="accordion">Aynı anda kaç kitap ödünç alabilirim?</button>
+            <div class="panel">
+                <p>Aynı anda en fazla 3 kitap ödünç alabilirsiniz.</p>
+            </div>
+
+            <button class="accordion">Geciken kitaplar için ceza uygulanıyor mu?</button>
+            <div class="panel">
+                <p>Evet, geciken her gün için küçük bir gecikme cezası uygulanır.</p>
+            </div>
+
+            <button class="accordion">Kitap rezervasyonu yapabilir miyim?</button>
+            <div class="panel">
+                <p>Evet, sistemimiz üzerinden rezervasyon yapılabilmektedir.</p>
+            </div>
+
+            <button class="accordion">Üyelik ücretli mi?</button>
+            <div class="panel">
+                <p>Hayır, üyelik tamamen ücretsizdir.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kütüphane Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(btn => {
+            btn.addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

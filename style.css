@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+header,
+footer {
+    background-color: #2e3b4e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav {
+    background-color: #1e90ff;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 2px 2px 8px #ccc;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.main {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 8px #ccc;
+}
+
+h2,
+h3 {
+    color: #2e3b4e;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 15px;
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d74d1;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease;
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.accordion:hover {
+    background-color: #ddd;
+}
+
+.panel {
+    padding: 0 15px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border-left: 2px solid #1e90ff;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2e3b4e;
+    color: white;
+}
+
+tr.danger {
+    background-color: #fdd;
+}
+
+tr:hover {
+    background-color: #eef;
+}
+
+img {
+    border-radius: 4px;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Mevcut CSS kodunun altına eklenir */
+
+/* Tabletler ve daha küçük ekranlar için (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+/* Küçük ekranlar için (max-width: 480px) */
+@media screen and (max-width: 480px) {
+
+    header,
+    footer {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .sidebar,
+    .main {
+        padding: 10px;
+        box-shadow: 1px 1px 4px #ccc;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        float: none;
+        padding: 12px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+        word-break: break-word;
+    }
+
+    iframe {
+        height: 150px;
+    }
+
+    .accordion {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

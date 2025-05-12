@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitaplar | Sanal Kütüphane Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Kitaplarımız</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a class="active" href="kitaplar.html">Kitaplar</a>
+        <a href="uyelik.html">Üyelik</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="yardim.html">Yardım / SSS</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menü</h3>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="kitaplar.html">Kitaplar</a></li>
+                <li><a href="uyelik.html">Üyelik</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="yardim.html">Yardım / SSS</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Mevcut Kitaplar</h2>
+            <table id="kitap-tablosu">
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Yazar</th>
+                    <th>Tür</th>
+                    <th>Durum</th>
+                </tr>
+                <tr>
+                    <td>Simyacı</td>
+                    <td>Paulo Coelho</td>
+                    <td>Roman</td>
+                    <td>Mevcut</td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td>George Orwell</td>
+                    <td>Distopya</td>
+                    <td>Mevcut Değil</td>
+                </tr>
+                <tr>
+                    <td>Nutuk</td>
+                    <td>Mustafa Kemal Atatürk</td>
+                    <td>Tarih</td>
+                    <td>Mevcut</td>
+                </tr>
+                <tr>
+                    <td>Hayvan Çiftliği</td>
+                    <td>George Orwell</td>
+                    <td>Roman</td>
+                    <td>Mevcut</td>
+                </tr>
+                <tr>
+                    <td>Sefiller</td>
+                    <td>Victor Hugo</td>
+                    <td>Klasik</td>
+                    <td>Mevcut</td>
+                </tr>
+            </table>
+            <p>Daha fazla kitap için kütüphanemizi ziyaret edebilirsiniz.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kütüphane Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        // Mevcut olmayan kitapları işaretle
+        document.querySelectorAll("#kitap-tablosu tr").forEach(function (row) {
+            let durum = row.cells[3];
+            if (durum && durum.textContent.includes("Mevcut Değil")) {
+                row.classList.add("danger");
+            }
+        });
+    </script>
+</body>
+
+</html>
